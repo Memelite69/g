@@ -90,7 +90,7 @@ var importObject = {
     }
 };
 
-WebAssembly.instantiateStreaming(fetch('doom.wasm'), importObject)
+WebAssembly.instantiateStreaming(fetch('https://github.com/Mr-funkinguy/wasmStuff/raw/main/doom/doom.wasm'), importObject)
     .then(obj => {
 
     /*Initialize Doom*/
