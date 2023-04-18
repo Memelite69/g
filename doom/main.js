@@ -105,7 +105,6 @@ WebAssembly.instantiateStreaming(fetch('https://diekmann.github.io/wasm-fizzbuzz
             return 127; // KEY_BACKSPACE
         case 17:
             return (0x80+0x1d); // KEY_RCTRL
-      
         case 18:
             return (0x80+0x38); // KEY_RALT
         case 37:
