@@ -24,14 +24,14 @@
         overflow-y: scroll;
       }
       #output span.log {
-        color:darkslateblue;
+        color:rgb(135, 126, 194);
       }
       #output span.stdout {
-        color: black;
+        color: rgb(255, 255, 255);
       }
       #output span.stderr {
         font-weight: bold;
-        color:brown;
+        color:rgb(238, 79, 79);
       }
 
       .container {
@@ -51,15 +51,19 @@
       spacebar <button id="spaceButton">&nbsp;&nbsp;&nbsp;&nbsp;</button> to open gates, 
       <button id="altButton">alt</button></p>
     <div class="container">
-      <canvas id="screen" width="640" height="400" tabindex="0"></canvas>
+      <canvas id="screen" width="640" height="400" style="border-radius: 15px; background-color: black;" tabindex="0"></canvas>
       <span>&nbsp;</span>
       <div id="output"></div>
+
     </div>
+    <br>
     <button id="Full" onclick="Fullscreen()">Fullscreen</button>
     <br>
     gettmilliseconds calls per second: <span id="getmsps_stats">0</span> Total getmilliseconds calls: <span id="getms_stats">0</span><br>
     DooM FPS: <span id="fps_stats">0</span> (target: 35FPS) Total Frames drawn: <span id="drawframes_stats">0</span><br>
     Browser Animation FPS: <span id="animationfps_stats">0</span> (target: around 60FPS, depending on browser)<br>
+    <br>
+    <br>
     <script>
       function Fullscreen() {
       var elem = document.getElementById("screen");
