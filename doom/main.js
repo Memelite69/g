@@ -90,7 +90,7 @@ var importObject = {
     }
 };
 
-WebAssembly.instantiateStreaming(fetch('doom.wasm'), importObject)
+WebAssembly.instantiateStreaming(fetch('https://github.com/Mr-funkinguy/wasmStuff/raw/main/doom/doom.wasm'), importObject)
     .then(obj => {
 
     /*Initialize Doom*/
@@ -104,6 +104,8 @@ WebAssembly.instantiateStreaming(fetch('doom.wasm'), importObject)
         case 8:
             return 127; // KEY_BACKSPACE
         case 17:
+            return (0x80+0x1d); // KEY_RCTRL
+        case 13:
             return (0x80+0x1d); // KEY_RCTRL
         case 18:
             return (0x80+0x38); // KEY_RALT
